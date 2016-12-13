@@ -8,31 +8,25 @@
   <link rel="dns-prefetch" href="https://zhsh2980.github.io">
   <title>MAC下软件安装神器brew和brew-cask的介绍和使用 | Android小辈 --Bro.</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="0. brew和brew-cask是什么
+  <meta name="description" content="0. brew 和 brew-cask是什么
 brew 又叫Homebrew，是Mac OSX上的软件包管理工具，能在Mac中方便的安装软件或者卸载软件， 只需要一个命令.
-brew-cask则是在brew的基础上由第三方维护.
-例如 「git」「java」「xcode」「python」「sourcetree」「node」,并且安装之后能自动配置路径,可谓省时又省力.
-
-1. brew和brew-ca">
+brew-cask 则是在brew的基础上由第三方维护.
+例如安装 「sublime text」「java」「chrome」「xcode」「python」「sourcetree」「node」,并且安装之后能自动配置环境变量,可">
 <meta property="og:type" content="article">
 <meta property="og:title" content="MAC下软件安装神器brew和brew-cask的介绍和使用">
 <meta property="og:url" content="https://zhsh2980.github.io/2016/12/13/MAC下软件安装神器brew和brew-cask的介绍和使用/index.html">
 <meta property="og:site_name" content="Android小辈 --Bro.">
-<meta property="og:description" content="0. brew和brew-cask是什么
+<meta property="og:description" content="0. brew 和 brew-cask是什么
 brew 又叫Homebrew，是Mac OSX上的软件包管理工具，能在Mac中方便的安装软件或者卸载软件， 只需要一个命令.
-brew-cask则是在brew的基础上由第三方维护.
-例如 「git」「java」「xcode」「python」「sourcetree」「node」,并且安装之后能自动配置路径,可谓省时又省力.
-
-1. brew和brew-ca">
-<meta property="og:updated_time" content="2016-12-13T07:08:41.000Z">
+brew-cask 则是在brew的基础上由第三方维护.
+例如安装 「sublime text」「java」「chrome」「xcode」「python」「sourcetree」「node」,并且安装之后能自动配置环境变量,可">
+<meta property="og:updated_time" content="2016-12-13T07:14:01.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="MAC下软件安装神器brew和brew-cask的介绍和使用">
-<meta name="twitter:description" content="0. brew和brew-cask是什么
+<meta name="twitter:description" content="0. brew 和 brew-cask是什么
 brew 又叫Homebrew，是Mac OSX上的软件包管理工具，能在Mac中方便的安装软件或者卸载软件， 只需要一个命令.
-brew-cask则是在brew的基础上由第三方维护.
-例如 「git」「java」「xcode」「python」「sourcetree」「node」,并且安装之后能自动配置路径,可谓省时又省力.
-
-1. brew和brew-ca">
+brew-cask 则是在brew的基础上由第三方维护.
+例如安装 「sublime text」「java」「chrome」「xcode」「python」「sourcetree」「node」,并且安装之后能自动配置环境变量,可">
   
     <link rel="alternative" href="/atom.xml" title="Android小辈 --Bro." type="application/atom+xml">
   
@@ -163,26 +157,26 @@ brew-cask则是在brew的基础上由第三方维护.
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="0-brew和brew-cask是什么"><a href="#0-brew和brew-cask是什么" class="headerlink" title="0. brew和brew-cask是什么"></a>0. brew和brew-cask是什么</h2><ul>
-<li>brew 又叫Homebrew，是Mac OSX上的软件包管理工具，能在Mac中方便的安装软件或者卸载软件， 只需要一个命令.</li>
-<li>brew-cask则是在brew的基础上由第三方维护.</li>
-<li>例如 「git」「java」「xcode」「python」「sourcetree」「node」,并且安装之后能自动配置路径,可谓省时又省力.</li>
+        <h2 id="0-brew-和-brew-cask是什么"><a href="#0-brew-和-brew-cask是什么" class="headerlink" title="0. brew 和 brew-cask是什么"></a>0. brew 和 brew-cask是什么</h2><ul>
+<li><strong>brew</strong> 又叫Homebrew，是Mac OSX上的软件包管理工具，能在Mac中方便的安装软件或者卸载软件， 只需要一个命令.</li>
+<li><strong>brew-cask</strong> 则是在brew的基础上由第三方维护.</li>
+<li>例如安装 「sublime text」「java」「chrome」「xcode」「python」「sourcetree」「node」,并且安装之后能<strong>自动配置环境变量</strong>,可谓省时又省力.</li>
 </ul>
-<h2 id="1-brew和brew-cask的特点"><a href="#1-brew和brew-cask的特点" class="headerlink" title="1. brew和brew-cask的特点"></a>1. brew和brew-cask的特点</h2><blockquote>
+<h2 id="1-brew-和-brew-cask的特点"><a href="#1-brew-和-brew-cask的特点" class="headerlink" title="1. brew 和 brew-cask的特点"></a>1. brew 和 brew-cask的特点</h2><blockquote>
 <p><strong>brew</strong> 是从下载源码解压然后 ./configure &amp;&amp; make install ，同时会包含相关依存库。并自动配置好各种环境变量，而且易于卸载。<br>这个对程序员来说简直是福音，简单的指令，就能快速安装和升级本地的各种开发环境。</p>
 <p><strong>brew cask</strong> 是 已经编译好了的应用包 （.dmg/.pkg），仅仅是下载解压，放在统一的目录中（/opt/homebrew-cask/Caskroom），省掉了自己去下载、解压、拖拽（安装）等蛋疼步骤，同样，卸载相当容易与干净。这个对一般用户来说会比较方便，包含很多在 AppStore 里没有的常用软件。</p>
 </blockquote>
  <a id="more"></a>
-<h2 id="2-安装brew"><a href="#2-安装brew" class="headerlink" title="2. 安装brew"></a>2. 安装brew</h2><p> 打开<a href="http://brew.sh/index_zh-cn.html" target="_blank" rel="external">Homebrew</a>官网，复制代码安装。</p>
-<p> 安装方法：  在Mac中打开Termal:  输入命令：</p>
+<h2 id="2-安装-brew"><a href="#2-安装-brew" class="headerlink" title="2. 安装 brew"></a>2. 安装 brew</h2><p> 打开<a href="http://brew.sh/index_zh-cn.html" target="_blank" rel="external">Homebrew</a>官网，复制代码安装。</p>
+<p> 安装方法：  在 Mac 中打开 Termal :  输入命令：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">ruby -e &quot;$(curl -fsSL https://raw.github.com/mxcl/homebrew/go)&quot;</div></pre></td></tr></table></figure>
-<p> 接下来,比如安装git</p>
+<p> 接下来,比如安装 git</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">brew install git</div></pre></td></tr></table></figure>
-<p>这样,git就安装好了.</p>
-<p>再比如卸载git</p>
+<p>这样, git 就安装好了.</p>
+<p>再比如卸载 git</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">brew uninstall git</div></pre></td></tr></table></figure>
-<p>这样,git就卸载了.</p>
-<h2 id="3-brew常用命令"><a href="#3-brew常用命令" class="headerlink" title="3. brew常用命令"></a>3. brew常用命令</h2><ul>
+<p>这样, git 就卸载了.</p>
+<h2 id="3-brew-常用命令"><a href="#3-brew-常用命令" class="headerlink" title="3. brew 常用命令"></a>3. brew 常用命令</h2><ul>
 <li><strong>brew install name</strong>     —安装源码</li>
 <li><strong>brew info svn</strong>    —显示软件的各种信息，包括版本啊源码地址啊等等</li>
 <li><strong>brew uninstall name</strong>   —卸载软件，很爽，一键静默卸载</li>
@@ -191,17 +185,17 @@ brew-cask则是在brew的基础上由第三方维护.
 <li><strong>brew update</strong>  —跟新brew软件自身</li>
 <li><strong>brew upgrade name</strong>  —更新安装过的软件,如果不加软件名，就更新所有可以更新的软件</li>
 <li><p><strong>brew cleanup</strong>   —清除下载的各种缓存</p>
-<p><strong>详见man brew</strong></p>
+<p><strong>详见 man brew</strong></p>
 </li>
 </ul>
-<h2 id="4-安装brew-cask"><a href="#4-安装brew-cask" class="headerlink" title="4. 安装brew-cask"></a>4. 安装brew-cask</h2><blockquote>
-<p>假设你已安装好了Homebrew，安装与使用极其简单，打开终端，输入：</p>
+<h2 id="4-安装-brew-cask"><a href="#4-安装-brew-cask" class="headerlink" title="4. 安装 brew-cask"></a>4. 安装 brew-cask</h2><blockquote>
+<p>假设你已安装好了 Homebrew ，安装与使用极其简单，打开终端，输入：</p>
 </blockquote>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">brew tap phinze/homebrew-cask</div><div class="line">brew install brew-cask</div></pre></td></tr></table></figure>
 <p>然后就可以像brew一样来安装chrome等软件，例如：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">brew cask install google-chrome</div></pre></td></tr></table></figure>
-<p>执行这条命命后会自动把chrome浏览器下载并安装到本机.</p>
-<h2 id="5-brew-cask的常用命令"><a href="#5-brew-cask的常用命令" class="headerlink" title="5. brew cask的常用命令"></a>5. brew cask的常用命令</h2><ul>
+<p>执行这条命命后会自动把 chrome 浏览器下载并安装到本机.</p>
+<h2 id="5-brew-cask-的常用命令"><a href="#5-brew-cask-的常用命令" class="headerlink" title="5. brew cask 的常用命令"></a>5. brew cask 的常用命令</h2><ul>
 <li><strong>brew cask search</strong>               — 列出所有可以被安装的软件</li>
 <li><strong>brew cask search name</strong>     — 查找所有和 name相关的应用</li>
 <li><strong>brew cask install name</strong>       — 下载安装软件</li>
@@ -209,13 +203,13 @@ brew-cask则是在brew的基础上由第三方维护.
 <li><strong>brew cask info app</strong>             — 列出应用的信息</li>
 <li><strong>brew cask list</strong>                      — 列出本机按照过的软件列表</li>
 <li><p><strong>brew cask cleanup</strong>              — 清除下载的缓存以及各种链接信息</p>
-<p><strong>PS:详见man brew cask</strong></p>
+<p><strong>PS:详见 man brew cask</strong></p>
 </li>
 </ul>
-<h2 id="6-更新brew-cask及通过brew-cask安装的程序"><a href="#6-更新brew-cask及通过brew-cask安装的程序" class="headerlink" title="6. 更新brew cask及通过brew-cask安装的程序"></a>6. 更新brew cask及通过brew-cask安装的程序</h2><ul>
+<h2 id="6-更新-brew-cask-及通过-brew-cask-安装的程序"><a href="#6-更新-brew-cask-及通过-brew-cask-安装的程序" class="headerlink" title="6. 更新 brew cask 及通过 brew-cask 安装的程序"></a>6. 更新 brew cask 及通过 brew-cask 安装的程序</h2><ul>
 <li>brew update &amp;&amp; brew upgrade brew-cask                  #更新cask自身</li>
 <li><p>brew cask uninstall name &amp;&amp; brew cask install name ＃更新程序</p>
-<p><em>目前homebrew-cask 并没有命令直接更新已安装的软件，软件更新主要是通过软件自身的完成更新</em></p>
+<p><em>目前 homebrew-cask 并没有命令直接更新已安装的软件，软件更新主要是通过软件自身的完成更新</em></p>
 </li>
 </ul>
 
