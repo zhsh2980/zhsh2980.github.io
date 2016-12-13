@@ -24,7 +24,7 @@ brew-cask则是在brew的基础上由第三方维护.
 例如 「git」「java」「xcode」「python」「sourcetree」「node」,并且安装之后能自动配置路径,可谓省时又省力.
 
 1. brew和brew-ca">
-<meta property="og:updated_time" content="2016-12-13T07:06:53.000Z">
+<meta property="og:updated_time" content="2016-12-13T07:08:41.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="MAC下软件安装神器brew和brew-cask的介绍和使用">
 <meta name="twitter:description" content="0. brew和brew-cask是什么
@@ -172,6 +172,7 @@ brew-cask则是在brew的基础上由第三方维护.
 <p><strong>brew</strong> 是从下载源码解压然后 ./configure &amp;&amp; make install ，同时会包含相关依存库。并自动配置好各种环境变量，而且易于卸载。<br>这个对程序员来说简直是福音，简单的指令，就能快速安装和升级本地的各种开发环境。</p>
 <p><strong>brew cask</strong> 是 已经编译好了的应用包 （.dmg/.pkg），仅仅是下载解压，放在统一的目录中（/opt/homebrew-cask/Caskroom），省掉了自己去下载、解压、拖拽（安装）等蛋疼步骤，同样，卸载相当容易与干净。这个对一般用户来说会比较方便，包含很多在 AppStore 里没有的常用软件。</p>
 </blockquote>
+ <a id="more"></a>
 <h2 id="2-安装brew"><a href="#2-安装brew" class="headerlink" title="2. 安装brew"></a>2. 安装brew</h2><p> 打开<a href="http://brew.sh/index_zh-cn.html" target="_blank" rel="external">Homebrew</a>官网，复制代码安装。</p>
 <p> 安装方法：  在Mac中打开Termal:  输入命令：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">ruby -e &quot;$(curl -fsSL https://raw.github.com/mxcl/homebrew/go)&quot;</div></pre></td></tr></table></figure>
@@ -186,7 +187,7 @@ brew-cask则是在brew的基础上由第三方维护.
 <li><strong>brew info svn</strong>    —显示软件的各种信息，包括版本啊源码地址啊等等</li>
 <li><strong>brew uninstall name</strong>   —卸载软件，很爽，一键静默卸载</li>
 <li><strong>brew search name</strong>    —搜索brew 支持的软件，支持模糊搜索</li>
-<li><strong>brew list</strong>   —列出本机通过brew安装的所有软件<a id="more"></a></li>
+<li><strong>brew list</strong>   —列出本机通过brew安装的所有软件</li>
 <li><strong>brew update</strong>  —跟新brew软件自身</li>
 <li><strong>brew upgrade name</strong>  —更新安装过的软件,如果不加软件名，就更新所有可以更新的软件</li>
 <li><p><strong>brew cleanup</strong>   —清除下载的各种缓存</p>

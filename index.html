@@ -158,21 +158,6 @@
 <p><strong>brew</strong> 是从下载源码解压然后 ./configure &amp;&amp; make install ，同时会包含相关依存库。并自动配置好各种环境变量，而且易于卸载。<br>这个对程序员来说简直是福音，简单的指令，就能快速安装和升级本地的各种开发环境。</p>
 <p><strong>brew cask</strong> 是 已经编译好了的应用包 （.dmg/.pkg），仅仅是下载解压，放在统一的目录中（/opt/homebrew-cask/Caskroom），省掉了自己去下载、解压、拖拽（安装）等蛋疼步骤，同样，卸载相当容易与干净。这个对一般用户来说会比较方便，包含很多在 AppStore 里没有的常用软件。</p>
 </blockquote>
-<h2 id="2-安装brew"><a href="#2-安装brew" class="headerlink" title="2. 安装brew"></a>2. 安装brew</h2><p> 打开<a href="http://brew.sh/index_zh-cn.html">Homebrew</a>官网，复制代码安装。</p>
-<p> 安装方法：  在Mac中打开Termal:  输入命令：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">ruby -e &quot;$(curl -fsSL https://raw.github.com/mxcl/homebrew/go)&quot;</div></pre></td></tr></table></figure>
-<p> 接下来,比如安装git</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">brew install git</div></pre></td></tr></table></figure>
-<p>这样,git就安装好了.</p>
-<p>再比如卸载git</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">brew uninstall git</div></pre></td></tr></table></figure>
-<p>这样,git就卸载了.</p>
-<h2 id="3-brew常用命令"><a href="#3-brew常用命令" class="headerlink" title="3. brew常用命令"></a>3. brew常用命令</h2><ul>
-<li><strong>brew install name</strong>     —安装源码</li>
-<li><strong>brew info svn</strong>    —显示软件的各种信息，包括版本啊源码地址啊等等</li>
-<li><strong>brew uninstall name</strong>   —卸载软件，很爽，一键静默卸载</li>
-<li><strong>brew search name</strong>    —搜索brew 支持的软件，支持模糊搜索</li>
-<li><strong>brew list</strong>   —列出本机通过brew安装的所有软件
         <a class="article-more-a"  href="/2016/12/13/MAC下软件安装神器brew和brew-cask的介绍和使用/#more">more >></a>
       
 
