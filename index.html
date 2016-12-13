@@ -149,12 +149,24 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="1-brew-cask-VS-App-Store"><a href="#1-brew-cask-VS-App-Store" class="headerlink" title="1. brew-cask VS App Store"></a>1. brew-cask VS App Store</h2><ul>
-<li>下载方便</li>
-<li>易于管理，容易卸载</li>
-<li>软件库是第三方维护,很强大</li>
+        <h2 id="0-brew和brew-cask是什么"><a href="#0-brew和brew-cask是什么" class="headerlink" title="0. brew和brew-cask是什么"></a>0. brew和brew-cask是什么</h2><ul>
+<li>brew 又叫Homebrew，是Mac OSX上的软件包管理工具，能在Mac中方便的安装软件或者卸载软件， 只需要一个命令.</li>
+<li>brew-cask则是在brew的基础上由第三方维护.</li>
+<li>例如 「git」「java」「xcode」「python」「sourcetree」「node」,并且安装之后能自动配置路径,可谓省时又省力.</li>
 </ul>
+<h2 id="1-brew和brew-cask的特点"><a href="#1-brew和brew-cask的特点" class="headerlink" title="1. brew和brew-cask的特点"></a>1. brew和brew-cask的特点</h2><blockquote>
+<p>brew 是从下载源码解压然后 ./configure &amp;&amp; make install ，同时会包含相关依存库。并自动配置好各种环境变量，而且易于卸载。<br>这个对程序员来说简直是福音，简单的指令，就能快速安装和升级本地的各种开发环境。</p>
+<p>而 brew cask 是 已经编译好了的应用包 （.dmg/.pkg），仅仅是下载解压，放在统一的目录中（/opt/homebrew-cask/Caskroom），省掉了自己去下载、解压、拖拽（安装）等蛋疼步骤，同样，卸载相当容易与干净。这个对一般用户来说会比较方便，包含很多在 AppStore 里没有的常用软件。</p>
+</blockquote>
 <h2 id="2-安装brew"><a href="#2-安装brew" class="headerlink" title="2. 安装brew"></a>2. 安装brew</h2><p> 打开<a href="http://brew.sh/index_zh-cn.html">Homebrew</a>官网，复制代码安装。</p>
+<p> 安装方法：  在Mac中打开Termal:  输入命令：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">ruby -e &quot;$(curl -fsSL https://raw.github.com/mxcl/homebrew/go)&quot;</div></pre></td></tr></table></figure>
+<p> 接下来,比如安装git</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">brew install git</div></pre></td></tr></table></figure>
+<p>这样,git就安装好了.</p>
+<p>再比如卸载git</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">brew uninstall git</div></pre></td></tr></table></figure>
+<p>这样,git就卸载了.</p>
 <h2 id="3-brew常用命令"><a href="#3-brew常用命令" class="headerlink" title="3. brew常用命令"></a>3. brew常用命令</h2><ul>
 <li><strong>brew install name</strong>     —安装源码</li>
 <li><strong>brew info svn</strong>    —显示软件的各种信息，包括版本啊源码地址啊等等</li>
