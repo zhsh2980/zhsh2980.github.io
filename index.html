@@ -150,12 +150,11 @@
     <div class="article-entry" itemprop="articleBody">
       
         <ol>
-<li><p>Automator 新建一个 Application</p>
-</li>
-<li><p>添加一个动作 “Run AppleScript”</p>
-</li>
+<li>Automator 新建一个 Application</li>
+<li>添加一个动作 “Run AppleScript”</li>
 <li><p>添加如下代码:</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">on run &#123;input, parameters&#125;</div><div class="line"></div><div class="line">tell application &quot;Finder&quot;</div><div class="line">set selection to make new file at (get insertion location)</div><div class="line">end tell</div><div class="line"></div><div class="line">return input</div><div class="line">end run</div><div class="line"></div><div class="line">作者：谢俊驰</div><div class="line">链接：https://www.zhihu.com/question/20883777/answer/81780928</div><div class="line">来源：知乎</div><div class="line"> 著作权归作者所有，转载请联系作者获得授权。</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">on run &#123;input, parameters&#125;</div><div class="line"></div><div class="line">tell application &quot;Finder&quot;</div><div class="line">set selection to make new file at (get insertion location)</div><div class="line">end tell</div><div class="line"></div><div class="line">return input</div><div class="line">end run</div></pre></td></tr></table></figure>
+<p>作者：谢俊驰<br>链接：<a href="https://www.zhihu.com/question/20883777/answer/81780928" target="_blank" rel="external">https://www.zhihu.com/question/20883777/answer/81780928</a><br>来源：知乎<br>著作权归作者所有，转载请联系作者获得授权。</p>
 </li>
 <li><p>保存到 “应用程序”文件夹, 名字姑且叫 “New File.app” 吧.</p>
 </li>
