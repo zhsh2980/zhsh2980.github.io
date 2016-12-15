@@ -86,23 +86,20 @@
 
 <meta name="description" content="Automator 新建一个 Application
 添加一个动作 “Run AppleScript”
-添加如下代码:
-12345678on run &amp;#123;input, parameters&amp;#125;tell application &amp;quot;Finder&amp;quot;set selection to make new file at (get insertion location)en">
+添加如下代码:12345678on run &amp;#123;input, parameters&amp;#125;tell application &amp;quot;Finder&amp;quot;set selection to make new file at (get insertion location)end">
 <meta property="og:type" content="article">
 <meta property="og:title" content="解决Mac下finder里面右键没有添加txt文件的问题">
 <meta property="og:url" content="https://zhsh2980.github.io/2016/12/14/解决Mac下finder里面右键没有添加txt文件的问题/index.html">
 <meta property="og:site_name" content="Android小辈 --Bro.">
 <meta property="og:description" content="Automator 新建一个 Application
 添加一个动作 “Run AppleScript”
-添加如下代码:
-12345678on run &amp;#123;input, parameters&amp;#125;tell application &amp;quot;Finder&amp;quot;set selection to make new file at (get insertion location)en">
-<meta property="og:updated_time" content="2016-12-14T04:02:06.000Z">
+添加如下代码:12345678on run &amp;#123;input, parameters&amp;#125;tell application &amp;quot;Finder&amp;quot;set selection to make new file at (get insertion location)end">
+<meta property="og:updated_time" content="2016-12-15T13:05:57.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="解决Mac下finder里面右键没有添加txt文件的问题">
 <meta name="twitter:description" content="Automator 新建一个 Application
 添加一个动作 “Run AppleScript”
-添加如下代码:
-12345678on run &amp;#123;input, parameters&amp;#125;tell application &amp;quot;Finder&amp;quot;set selection to make new file at (get insertion location)en">
+添加如下代码:12345678on run &amp;#123;input, parameters&amp;#125;tell application &amp;quot;Finder&amp;quot;set selection to make new file at (get insertion location)end">
 
 
 
@@ -518,10 +515,12 @@
         <ol>
 <li>Automator 新建一个 Application</li>
 <li>添加一个动作 “Run AppleScript”</li>
-<li><p>添加如下代码:</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">on run &#123;input, parameters&#125;</div><div class="line"></div><div class="line">tell application &quot;Finder&quot;</div><div class="line">set selection to make new file at (get insertion location)</div><div class="line">end tell</div><div class="line"></div><div class="line">return input</div><div class="line">end run</div></pre></td></tr></table></figure>
-<p>作者：谢俊驰<br>链接：<a href="https://www.zhihu.com/question/20883777/answer/81780928" target="_blank" rel="external">https://www.zhihu.com/question/20883777/answer/81780928</a><br>来源：知乎<br>著作权归作者所有，转载请联系作者获得授权。</p>
+<li>添加如下代码:<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">on run &#123;input, parameters&#125;</div><div class="line"></div><div class="line">tell application &quot;Finder&quot;</div><div class="line">set selection to make new file at (get insertion location)</div><div class="line">end tell</div><div class="line"></div><div class="line">return input</div><div class="line">end run</div></pre></td></tr></table></figure>
 </li>
+</ol>
+ <a id="more"></a>
+<p>  作者：谢俊驰<br> 链接：<a href="https://www.zhihu.com/question/20883777/answer/81780928" target="_blank" rel="external">https://www.zhihu.com/question/20883777/answer/81780928</a><br> 来源：知乎<br>  著作权归作者所有，转载请联系作者获得授权。</p>
+<ol>
 <li><p>保存到 “应用程序”文件夹, 名字姑且叫 “New File.app” 吧.</p>
 </li>
 <li><p>Finder 工具栏右键, 自定义, 然后把 New File.app 拖上去, 大功告成.</p>
