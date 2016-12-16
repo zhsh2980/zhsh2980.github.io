@@ -212,7 +212,7 @@
       
         <li class="menu-item menu-item-search">
           
-          <a href="#" class="popup-trigger">
+          <a href="javascript:" class="popup-trigger">
               
           
 
@@ -820,22 +820,26 @@
 
 
 
+  
+    
+
+  
+  
+  
+  <link rel="stylesheet" href="/lib/algolia-instant-search/instantsearch.min.css">
+
+  
+  
+  <script src="/lib/algolia-instant-search/instantsearch.min.js"></script>
+  
+
+  <script type="text/javascript" src="/js/src/algolia.js?v=5.1.0"></script>
+
+  
+
 </body>
 </html>
- to create');
-              }
-            });
-          }
-        },
-        error: function(error) {
-          console.log('Error:' + error.code + " " + error.message);
-        }
-      });
-    }
-
-    $(function() {
-      var Counter = AV.Object.extend("Counter");
-      if ($('.leancloud_visitors').length == 1) {
+   if ($('.leancloud_visitors').length == 1) {
         addCount(Counter);
       } else if ($('.post-title-link').length > 1) {
         showTime(Counter);
@@ -862,6 +866,23 @@
   <script src="/js/src/algolia-search.js?v=5.1.0"></script>
 
 
+
+  
+    
+
+  
+  
+  
+  <link rel="stylesheet" href="/lib/algolia-instant-search/instantsearch.min.css">
+
+  
+  
+  <script src="/lib/algolia-instant-search/instantsearch.min.js"></script>
+  
+
+  <script type="text/javascript" src="/js/src/algolia.js?v=5.1.0"></script>
+
+  
 
 </body>
 </html>
