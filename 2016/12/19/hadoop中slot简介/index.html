@@ -92,7 +92,7 @@
 <meta property="og:site_name" content="Bro.">
 <meta property="og:description" content="Slots是Hadoop的一个重要概念。然而在Hadoop相关论文，slots的阐述难以理解。网上关于slots的概念介绍也很少，而对于一个有经验的Hadoop开发者来说，他们可能脑子里已经理解了slots的真正含义，但却难以清楚地表达出来，Hadoop初学者听了还是云里雾里。我来尝试讲解一下，以期抛砖引玉。
 首先，slot不是CPU的Core，也不是memory chip，它是一个逻辑概念，一个">
-<meta property="og:updated_time" content="2016-12-19T12:47:22.000Z">
+<meta property="og:updated_time" content="2016-12-19T12:50:11.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="hadoop中slot简介">
 <meta name="twitter:description" content="Slots是Hadoop的一个重要概念。然而在Hadoop相关论文，slots的阐述难以理解。网上关于slots的概念介绍也很少，而对于一个有经验的Hadoop开发者来说，他们可能脑子里已经理解了slots的真正含义，但却难以清楚地表达出来，Hadoop初学者听了还是云里雾里。我来尝试讲解一下，以期抛砖引玉。
@@ -412,9 +412,9 @@
 <a id="more"></a>
 <p><strong>Hadoop利用slots来管理分配节点的资源。</strong>每个Job申请资源<strong>以slots为单位</strong>，每个节点会确定自己的计算能力以及memory确定自己包含的slots总量。当某个Job要开始执行时，先向JobTracker申请slots，JobTracker分配空闲的slots，Job再占用slots，Job结束后，归还slots。每个TaskTracker定期（例如淘宝Hadoop心跳周期是5s）通过心跳(hearbeat)与Jobtracker通信，一方面汇报自己当前工作状态，JobTracker得够某个TaskTracker<strong>是否Alive</strong>；同时<strong>汇报自身空闲slots数量</strong>。JobTracker利用某个调度规则，如Hadoop默认调度器FIFO或者Capacity Scheduler、FairScheduler等。（注：淘宝Hadoop使用云梯调度器YuntiScheuler，它是基于Fair Scheduler进行修改的）。</p>
 <p>Hadoop里有 <strong>两种slots, map slots和reduce slots</strong>，map task使用map slots，一一对应，reduce task使用reduce slots。注： 现在越来越多的观点认为应该打破map slots与 reduce slots的界限，应该被视为统一的资源池，they are all resource，从而提高资源的利用率。区分map slots和reduce slots，容易<strong>导致某一种资源紧张</strong>，而另一个资源却有空闲。在Hadoop的下一代框架MapR中，<strong>已经取消了map slots与reduce slots的概念</strong>，并将Jobtracker的功能一分为二，<strong>用ResourceManager来管理节点资源，用ApplicationMaster来监控与调度作业</strong>。ApplicationMaster是每个Application都有一个单独的实例，application是用户提交的一组任务，它可以是一个或多个job的任务组成。</p>
-<p>Hadoop中通常每个tasktracker会包含多个slots，Job的一个task均对应于tasktracker中的一个slot。系统中map slots总数与</p>
-<p>reducer slots总数的计算公式如下：</p>
-<p>Map slots总数=集群节点数×mapred.tasktracker.map.tasks.maximum<br>Reducer slots总数=集群节点数×mapred.tasktracker.reduce.tasks.maximum</p>
+<p>Hadoop中通常每个tasktracker会包含多个slots，Job的一个task均对应于tasktracker中的一个slot。系统中map slots总数与reducer slots总数的计算公式如下：</p>
+<p>Map slots总数=集群节点数×mapred.tasktracker.map.tasks.maximum</p>
+<p>Reducer slots总数=集群节点数×mapred.tasktracker.reduce.tasks.maximum</p>
 
       
     </div>
