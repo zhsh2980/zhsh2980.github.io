@@ -302,6 +302,275 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+  <link itemprop="mainEntityOfPage" href="https://zhsh2980.github.io/2016/12/20/Windows下软件安装神器Chocolatey和Mac下 Homebrew 的介绍和使用/">
+
+  <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <meta itemprop="name" content="zhangshan">
+    <meta itemprop="description" content="">
+    <meta itemprop="image" content="http://o9fcmatxz.bkt.clouddn.com/%E5%A4%B4%E5%83%8F150%2A150.png">
+  </span>
+
+  <span style="display:none" itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="Bro.">
+    <span style="display:none" itemprop="logo" itemscope itemtype="http://schema.org/ImageObject">
+      <img style="display:none;" itemprop="url image" alt="Bro." src="">
+    </span>
+  </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2016/12/20/Windows下软件安装神器Chocolatey和Mac下 Homebrew 的介绍和使用/" itemprop="url">
+                  Windows下软件安装神器Chocolatey和Mac下 Homebrew 的介绍和使用
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2016-12-20T13:16:35+08:00">
+                2016-12-20
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+              <span class="post-meta-divider">|</span>
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/转载/" itemprop="url" rel="index">
+                    <span itemprop="name">转载</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <a href="/2016/12/20/Windows下软件安装神器Chocolatey和Mac下 Homebrew 的介绍和使用/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/12/20/Windows下软件安装神器Chocolatey和Mac下 Homebrew 的介绍和使用/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h2 id="1-Chocolatey"><a href="#1-Chocolatey" class="headerlink" title="1. Chocolatey"></a>1. Chocolatey</h2><h2 id="遇到的问题"><a href="#遇到的问题" class="headerlink" title="遇到的问题"></a>遇到的问题</h2><p>windows下要安装很多软件，Git，Node，Ruby，Virtualbox，Vagrant，Atom，Brackets，Chrome…  有些软件是你要直接用的，有些是其它软件所依赖的。安装这些东西，你得先找到它们的官方网站，然后下载适合自己系统的版本，双击安装，Next，Next，下一步，下一步  …  完成！安装完以后，你发现还不能用，因为你不知道这个软件还需要你去安装一个其它的东西。<br>有些软件是需要翻墙的,比如 chrome.升级时还需要翻墙.不可谓不麻烦.</p>
+<h2 id="解决的方法"><a href="#解决的方法" class="headerlink" title="解决的方法"></a>解决的方法</h2><p>正确的做法是使用包管理工具（Package Manager）去管理这些软件，这里说的是操作系统级别的包管理工具，也就是管理想要安装到操作系统上的软件的工具。在以后，你还会听到项目级别的包管理，比如前端项目用的 Bower ，还有管理 NodeJS 包的 npm 。</p>
+<p>包管理工具，可以让我们用几个简单的命令去安装，升级，还有删除软件，并且它会自动给我们解决软件之间的依赖的问题。</p>
+<p>Windows 用户可以使用 Chocolatey 这个包管理工具，Mac 用户可以使用 Homebrew 。</p>
+<h2 id="Chocolatey"><a href="#Chocolatey" class="headerlink" title="Chocolatey"></a>Chocolatey</h2><p>Windows 需要安装一下 Chocolatey，然后再用 Chocolatey 去管理需要安装到系统上的软件，这些可以安装的软件叫做包（ Package ）。</p>
+<p>在命令行工具下面安装 Chocolatey，通过命令提示符（cmd），或者 Powershell。<br>choco search 去搜索想要的包，用 -all 参数会显示所有可用的版本。<br>choco install 安装包，用 -version 参数可以安装指定版本的包。<br>choco upgrade 把安装的包升级成最新的版本。<br>choco uninstall 从电脑上删除已经安装的包，删除前用 choco version 命令查看指定包的是否有可用的更新。</p>
+<h2 id="安装-Chocolatey"><a href="#安装-Chocolatey" class="headerlink" title="安装 Chocolatey"></a>安装 Chocolatey</h2><p>安装 Chocolatey，只需要在 Windows 系统的命令行工具下面去执行一行命令，这个命令行工具可以是 命令提示符（cmd），也可以是 Powershell ，只需要在其中的一个上面安装 Chocolatey 就可以了。你要用管理员的身份去运行命令行工具，不然会遇到权限问题。</p>
+<p><strong>以管理员身份打开命令行工具</strong></p>
+<p>Windows 7：点击 开始 菜单，在搜索框里输入 cmd 或者 powershell ，找到以后，用鼠标右键点击它们，选择 以管理员身份运行。</p>
+<p>Windows 8 + ：使用快捷键 win + Q ，搜索 cmd 或者 powershell ，然后右键点击它们，在窗口下面，选择 以管理员身份运行。</p>
+<p><strong>在 命令提示符 上安装 Chocolatey</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">@powershell -NoProfile -ExecutionPolicy unrestricted -Command &quot;iex ((new-object net.webclient).DownloadString(&apos;https://chocolatey.org/install.ps1&apos;))&quot; &amp;&amp; SET PATH=%PATH%;%ALLUSERSPROFILE%\chocolatey\bin</div></pre></td></tr></table></figure>
+<p><strong>在 Powershell 上安装 Chocolatey</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">iex ((new-object net.webclient).DownloadString(&apos;https://chocolatey.org/install.ps1&apos;))</div></pre></td></tr></table></figure>
+<p> <strong>提示</strong>：如果是在 Powershell 下面安装 Chocolatey 之前，先修改一下 Powershell 的执行策略，不然会出现 “此系统中禁止执行脚本” 这样的错误，解决的方法是执行下面的命令，意思就是把执行的策略设置成不限制：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">Set-ExecutionPolicy unrestricted</div></pre></td></tr></table></figure>
+<p><strong>测试</strong> </p>
+<p>在命令行工具的下面，输入：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">choco help</div></pre></td></tr></table></figure>
+<p>如果出现一些有用的帮助信息，比如 Chocolatey 的版本号，安装到的目录，相关的命令，还有示例等等，这就说明我们已经可以在系统上使用 Chocolatey 了。</p>
+<h2 id="使用-Chocolatey"><a href="#使用-Chocolatey" class="headerlink" title="使用 Chocolatey"></a>使用 Chocolatey</h2><p>用 Chocolatey 做的事都是通过在命令行工具里面输入命令去做的，查看这些命令可以在使用 choco help 这个命令，Chocolatey 的命令都是用 choco 开头，后面接着是更具体的子命令，比如 install 就是去安装点什么，update 是去升级指定的包，uninstall 是把包从电脑上删除掉。</p>
+<p><strong>搜索</strong></p>
+<p>在 Chocolatey 的官方网站上（<a href="https://chocolatey.org/packages），可以查看所有可以使用" target="_blank" rel="external">https://chocolatey.org/packages），可以查看所有可以使用</a> Chocolatey 安装的东西，或者也可以在命令行工具的下面去搜索想要安装的东西：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">choco search &lt;keyword&gt;</div></pre></td></tr></table></figure>
+<p>跟 search 命令功能类似的还有 list 命令：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">choco list &lt;keyword&gt;</div></pre></td></tr></table></figure>
+<p>比如搜索一下 nodeJS 相关的包，可以这样：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">choco search nodeJS</div></pre></td></tr></table></figure>
+<p>上面的命令会在返回所以跟 nodeJS 相关的包，想要查看这些包所有的可用的版本，可以在命令的后面加上一个 -all 参数：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">choco search nodeJS -all</div></pre></td></tr></table></figure>
+<p><strong>包的类型</strong></p>
+<ul>
+<li>*.例：nodejs，git）</li>
+<li>*. install （例：nodejs.install，git.install）</li>
+<li>*. commandline（例：nodejs.commandline，未来会被抛弃）</li>
+<li>*. portable（例：putty.portable）<br>Chocolatey 的包有不同的类型，有些包的名字里面会包含特殊的后缀，比如 .install ，.commandline，.portable ，有些包的名字不带这些后缀。</li>
+</ul>
+<p>安装带 .install 后缀的包，这个包会出现在系统控制面板里的 卸载或更改程序 里面，你可以把 .install 的包想成是通过安装程序（msi）安装的包。</p>
+<p>.commandline（未来会被抛弃） 与 .portable 后缀的包是压缩包（zip），安装这种后缀的包，你不能在 卸载或更改程序 里找到它们。</p>
+<p>你也可以选择不带后缀的包，这样如果系统中已经安装了这个包，就会跳过去，如果没安装，Chocolatey 就会为你安装一个，默认安装的这个包的类型应该就是 .install 后缀的包。</p>
+<p><strong>安装</strong></p>
+<p>安装包，用的是 choco install 命令，把想要安装的包的名字放到 install 的后面，想一次去安装多个包，可以在 install 命令后面添加一个包的名字的列表，不同的包之间用空格分隔开。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">choco install &lt;package1 package2 package3...&gt;</div></pre></td></tr></table></figure>
+<p>比如我们想去安装一个 cURL 工具，安装之前可以先用 search 命令搜索一下，搜索的时候加上 -all 参数，会显示出包的所有可用的版本，在安装的时候，你可以在 -version 参数的后面，指定一个具体要安装的版本，不使用 -version 参数，直接安装会安装包的最新发布的版本。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">choco search curl -all</div></pre></td></tr></table></figure>
+<p>会返回一个列表：</p>
+<p><code>curl 7.21.7
+ curl 7.22.0
+ curl 7.23.1
+ curl 7.25.0
+ curl 7.28.1</code></p>
+<p>下面我们故意去安装一个旧版本的 curl ， 一会儿再去升级一下它。比如我要安装的是 7.22.0 版本的 curl ：</p>
+<p><code>choco install curl -version 7.22.0</code></p>
+<p>Chocolatey 不仅可以给我们安装指定版本的包，它还能解决包的依赖问题，也就是，如果你安装的这个包需要其它的包提供的功能，Chocolatey 会自动给你安装这个依赖的包。</p>
+<p>安装以后，可以用 choco list 命令，加上一个 -localonly 或 -lo（简写形式） 参数，查看在本地安装的包的列表。</p>
+<p><code>choco list -localonly</code></p>
+<p><strong>升级</strong></p>
+<p>升级安装在本地电脑上的包，用的是 choco upgrade 命令，后面加上要升级的包的名字：</p>
+<p><code>choco  upgrade &lt;package&gt;</code></p>
+<p>在升级包之前，可以先先去查看一下有没有可用的升级。如果你想查看 Chocolatey 本身有没有可用的升级，执行命令：</p>
+<p><code>choco version</code></p>
+<p>在 choco version 命令的后面，输入具体的包的名字，可以查看指定的这个包有没有可用的新版本。比如查看一下前面我们安装的 cURL 这个小东西的升级：</p>
+<p><code>choco version curl</code></p>
+<p>返回的结果看起来是这样的：</p>
+<p><code>name       : curl
+found      : 7.22.0
+...
+latest     : 7.28.1
+...</code></p>
+<p>name 对应的是包的名字，found 后面是安装在本地电脑上的版本，latest 后面是最新的可用的版本。这里 cURL 这个包的最新版本是 7.28.1 ，比我们安装的版本要新，所以可以去升级一下它。</p>
+<p><code>choco  upgrade curl</code></p>
+<p>cURL 是一个命令行工具，所以在命令行工具的下面，查看这个小工具的版本可以这样：</p>
+<p><code>curl -version</code></p>
+<p>上面命令会返回当前安装在电脑上的 cURL 的版本，你会发现，它已经被 Chocolatey  升级成最新的版本了。</p>
+<p><strong>删除</strong></p>
+<p>想要删除掉用 Chocolatey 安装的包，用的是 choco uninstall ，后面加上要卸载或者删除掉的包的名字。</p>
+<p><code>choco uninstall &lt;package&gt;</code></p>
+<p>在删除包之前，可以查看一下所有安装在本地的包的列表：</p>
+<p><code>choco list -localonly</code></p>
+<p>比如我们要删除掉之前安装的 cURL 这个包：</p>
+<p><code>choco uninstall curl</code></p>
+<p>成功以后，再查看一下安装在本地的包的列表，已经看不到 cURL 了。</p>
+<h1 id="2-Homebrew"><a href="#2-Homebrew" class="headerlink" title="2. Homebrew"></a>2. Homebrew</h1><p>Mac 上面有 App Store，它像是一个图形界面的包管理工具，也可以很方便的管理系统上的软件。不过很多软件你是在 App Store 上面找不到的，所以，可以通过 Homebrew 这个包管理工具，在命令行下面去管理软件。这些能够使用 Homebrew 安装的东西叫做  Package，在 Homebrew 里面，Package 还有个名字叫 Formula 。</p>
+<p>在终端上执行安装 Homebrew 的命令。<br>man brew 可以查看 brew 命令的使用手册。<br>brew search 去搜索一下想要安装的东西。<br>brew install 可以安装指定的包。<br>brew upgrade 可以升级包。<br>brew remote 删除掉不需要的包。</p>
+<h2 id="安装-Homebrew"><a href="#安装-Homebrew" class="headerlink" title="安装 Homebrew"></a>安装 Homebrew</h2><p>打开 Mac 自带的终端，可以在 Launchpad（F4）里面搜索 Terminal（终端），然后执行下面的命令：</p>
+<p><code>ruby -e &quot;$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)&quot;</code></p>
+<p>安装完成以后，执行 brew help，如果返回一些有用的帮助信息，说明可以在我们的电脑上使用 Homebrew 去管理软件了。</p>
+<p><code>brew help</code></p>
+<p><strong>使用 Homebrew</strong></p>
+<p>Homebrew 的命令都是用 brew 开头，后面接着是具体的命令。比如 brew help 可以查看帮助信息，brew install 可以去安装包，brew upgrade 可以升级已经安装的包。</p>
+<p><strong>查看使用手册</strong></p>
+<p>要查看 Homebrew 所有可用的命令还有帮助的信息，在终端上执行 man brew 这条命令，man 就是 manpage （参考页），在 man 命令后面加上要查看使用手册的命令的名字。</p>
+<p><code>man brew</code></p>
+<p>要显示的内容如果很多，就会分页显示，有几个按键可以去浏览这些内容：</p>
+<ul>
+<li>f 向后翻页</li>
+<li>b 向前翻页</li>
+<li>q 退出显示</li>
+</ul>
+<p><strong>搜索</strong></p>
+<p>搜索可以使用 Homebrew 安装的东西，用的是 brew search，后面加上搜索的关键词。</p>
+<p><code>brew search &lt;keyword&gt;</code></p>
+<p>比如搜索一下 tree 这个小工具：</p>
+<p><code>brew search tree</code></p>
+<p>上面的命令会列出包含 tree 这个关键词的包，要查看某个包的所有可用的版本，可以使用 brew versions，后面加上包的名字，像这样：</p>
+<p><code>brew versions tree</code></p>
+<p>brew versions 不在被支持了，可以使用：<a href="https://github.com/Homebrew/homebrew-versions" target="_blank" rel="external">https://github.com/Homebrew/homebrew-versions</a><br>访问这个包的主页可以使用 brew home 这个命令，再加上包的名字，这样可以在浏览器中打开包的主页：</p>
+<p><code>brew home tree</code></p>
+<p><strong>安装</strong></p>
+<p>安装包用的是 brew install ，一般用 Homebrew 安装的东西都是一些命令行的工具，这些工具大部分都是开发的时候要用的，不过你会看到一些 Cask 开头的包，Cask 扩展了 Homebrew ，它可以让我们用 Homebrew 去安装一些带图形界面的软件，比如 Chrome 浏览器。</p>
+<p><code>brew install &lt;package&gt;</code></p>
+<p>下面我们用这个命令去安装一个叫 tree 的小工具：</p>
+<p><code>brew install tree</code></p>
+<p>完成以后，在终端上输入：</p>
+<p><code>tree --help</code></p>
+<p>如果你能看到一些有用的帮助信息，说明已经可以使用 tree 这个工具了。想查看一下使用 brew 安装的东西，输入：</p>
+<p><code>brew list</code></p>
+<p>在返回的安装的包的列表里，你应该可以找到刚才用 brew install 安装的 tree 。</p>
+<p><strong>升级</strong></p>
+<p>升级 Homebrew 本身，用的是 brew update 命令，如果你要升级的是已经安装的包，可以使用 brew upgrade，后面不加具体的要升级的包，Homebrew 会去升级所有的包，也可以在后面指定某个要升级的包。</p>
+<p><code>brew upgrade &lt;package&gt;</code></p>
+<p>比如去升级一下上面安装的 tree，可以先看一下这个包有没有可用的更新。</p>
+<p><code>brew outdated</code></p>
+<p>如果有，就可以去升级一下它：</p>
+<p><code>brew upgrade tree</code></p>
+<p><strong>删除</strong></p>
+<p>删除使用 Homebrew 安装的包，用的是 brew remove ，后面加上要删除的包的名字。</p>
+<p><code>brew remove &lt;package&gt;</code></p>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
   <link itemprop="mainEntityOfPage" href="https://zhsh2980.github.io/2016/12/19/hadoop中slot简介/">
 
   <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1299,136 +1568,6 @@
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-  <link itemprop="mainEntityOfPage" href="https://zhsh2980.github.io/2016/12/12/Mac「外接键盘的删除快捷键」原来是这个/">
-
-  <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
-    <meta itemprop="name" content="zhangshan">
-    <meta itemprop="description" content="">
-    <meta itemprop="image" content="http://o9fcmatxz.bkt.clouddn.com/%E5%A4%B4%E5%83%8F150%2A150.png">
-  </span>
-
-  <span style="display:none" itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-    <meta itemprop="name" content="Bro.">
-    <span style="display:none" itemprop="logo" itemscope itemtype="http://schema.org/ImageObject">
-      <img style="display:none;" itemprop="url image" alt="Bro." src="">
-    </span>
-  </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2016/12/12/Mac「外接键盘的删除快捷键」原来是这个/" itemprop="url">
-                  Mac「外接键盘的删除快捷键」原来是这个
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2016-12-12T11:49:54+08:00">
-                2016-12-12
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <a href="/2016/12/12/Mac「外接键盘的删除快捷键」原来是这个/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/12/12/Mac「外接键盘的删除快捷键」原来是这个/" itemprop="commentCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-
-          
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <p>holy shit.</p>
-<p>Mac自身的是command+del.</p>
-<p>找了很久,结果是 <strong>windows+space</strong> ,真是想不到…</p>
-          <!--noindex-->
-          <div class="post-more-link text-center">
-            <a class="btn" href="/2016/12/12/Mac「外接键盘的删除快捷键」原来是这个/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
   </section>
 
   
@@ -1474,7 +1613,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">10</span>
+              <span class="site-state-item-count">11</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
@@ -1491,7 +1630,7 @@
           
             <div class="site-state-item site-state-tags">
               <a href="/tags">
-                <span class="site-state-item-count">16</span>
+                <span class="site-state-item-count">17</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
