@@ -104,7 +104,7 @@ Linux虚拟机设置 ：
 安装Linux下面的VMware Tools : 
 
 安装VM tools : 解压到桌面  进入目录  ./v">
-<meta property="og:updated_time" content="2017-01-13T13:31:41.000Z">
+<meta property="og:updated_time" content="2017-01-13T13:36:17.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="hadoop下编写wordcount">
 <meta name="twitter:description" content="安装linux虚拟机及伪分布式安装 ：极客学院之Hadoop入门MapReduce WordCount 编码实战wordcount编码实战
@@ -467,37 +467,12 @@ Linux虚拟机设置 ：
 <blockquote>
 <p>查看hadoop下的文件 ：<br>hadoop fs -ls /<br>新建文本文件  vim word.txt<br>hadoop fs -put /(本地路径) /（Hadoop根目录）<br>运行jar ： hadoop jar /wcrunner(jar路径)<br>删除文件 ： hdfs dfs -rm -r /<em><br>查看Hadoop文件 ： hadoop fs -cat /</em><br>查看本地文件 ： cat /*<br>访问 hdfs : 192.168.191.31:50070<br>访问 yarn : 192.168.191.31:8088</p>
 </blockquote>
-<p>hadoop xml配置 :<br><code>配置hadoop
-注意：hadoop2.x的配置文件$HADOOP_HOME/etc/hadoop
-伪分布式需要修改5个配置文件
-第一个：hadoop-env.sh
-vim hadoop-env.sh
-export JAVA_HOME=/usr/java/jdk1.7.0_79</code>    </p>
-<p>第二个：core-site.xml<br>``</p>
-<p><property></property></p>
-<p><name>fs.default.name</name></p>
-<p><value>hdfs://bro:9000</value><br></p>
-<p><property></property></p>
-<p><name>fs.defaultFS</name></p>
-<p><value>hdfs://bro:9000</value><br></p>
-<p><property></property></p>
-<p><name>hadoop.tmp.dir</name><br><!-- 注意此处是真的路径名 --></p>
-<p><value>/bro/hadoop-2.7.0/tmp</value><br><br>``        </p>
-<p>第三个：hdfs-site.xml<br>``</p>
-<p><property></property></p>
-<p><name>dfs.replication</name></p>
-<p><value>1</value><br><br>``</p>
-<p>第四个：mapred-site.xml<br>``<br>(mv mapred-site.xml.template mapred-site.xml)<br>mv mapred-site.xml.template mapred-site.xml<br>vim mapred-site.xml</p>
-<p><property></property></p>
-<p><name>mapreduce.framework.name</name></p>
-<p><value>yarn</value><br><br>``</p>
-<p>第五个：yarn-site.xml<br>``<br><!-- 指定YARN的老大（ResourceManager）的地址 --></p>
-<p><property></property></p>
-<p><name>yarn.resourcemanager.hostname</name></p>
-<p><value>bro</value><br></p>
-<p><property></property></p>
-<p><name>yarn.nodemanager.aux-services</name></p>
-<p><value>mapreduce_shuffle</value><br><br>``</p>
+<p>hadoop xml配置 :<br>``<br>配置hadoop<br>注意：hadoop2.x的配置文件$HADOOP_HOME/etc/hadoop<br>伪分布式需要修改5个配置文件</p>
+<p>第一个：hadoop-env.sh<br>vim hadoop-env.sh<br>export JAVA_HOME=/usr/java/jdk1.7.0_79</p>
+<p>第二个：core-site.xml</p>
+<p>第三个：hdfs-site.xml</p>
+<p>第四个：mapred-site.xml </p>
+<p>第五个：yarn-site.xml</p>
 
       
     </div>
