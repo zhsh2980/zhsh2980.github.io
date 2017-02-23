@@ -104,7 +104,7 @@ Linux虚拟机设置 ：
 安装Linux下面的VMware Tools : 
 
 安装VM tools : 解压到桌面  进入目录  ./v">
-<meta property="og:updated_time" content="2017-01-13T13:36:17.000Z">
+<meta property="og:updated_time" content="2017-02-23T10:22:27.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="hadoop下编写wordcount">
 <meta name="twitter:description" content="安装linux虚拟机及伪分布式安装 ：极客学院之Hadoop入门MapReduce WordCount 编码实战wordcount编码实战
@@ -465,7 +465,7 @@ Linux虚拟机设置 ：
 </blockquote>
 <p>Hadoop命令 ： </p>
 <blockquote>
-<p>查看hadoop下的文件 ：<br>hadoop fs -ls /<br>新建文本文件  vim word.txt<br>hadoop fs -put /(本地路径) /（Hadoop根目录）<br>运行jar ： hadoop jar /wcrunner(jar路径)<br>删除文件 ： hdfs dfs -rm -r /<em><br>查看Hadoop文件 ： hadoop fs -cat /</em><br>查看本地文件 ： cat /*<br>访问 hdfs : 192.168.191.31:50070<br>访问 yarn : 192.168.191.31:8088</p>
+<p>查看hadoop下的文件 ：<br>开启 hadoop : 1)获取 su 权限 2）start-all.sh<br>关闭 Hadoop ： stop-all.sh<br>hadoop fs -ls /<br>新建文本文件  vim word.txt<br>hadoop fs -put /(本地路径) /（Hadoop根目录）<br>运行jar ： hadoop jar /wcrunner(jar路径)<br>删除文件 ： hdfs dfs -rm -r /<em><br>查看Hadoop文件 ： hadoop fs -cat /</em><br>查看本地文件 ： cat /*<br>访问 hdfs : 192.168.191.31:50070<br>访问 yarn : 192.168.191.31:8088</p>
 </blockquote>
 <p>hadoop xml配置 :<br>``<br>配置hadoop<br>注意：hadoop2.x的配置文件$HADOOP_HOME/etc/hadoop<br>伪分布式需要修改5个配置文件</p>
 <p>第一个：hadoop-env.sh<br>vim hadoop-env.sh<br>export JAVA_HOME=/usr/java/jdk1.7.0_79</p>
