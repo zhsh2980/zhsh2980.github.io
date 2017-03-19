@@ -3,6 +3,13 @@
   
     
     <entry>
+      <title><![CDATA[招聘相关途径]]></title>
+      <url>%2F2017%2F03%2F19%2F%E6%8B%9B%E8%81%98%E7%9B%B8%E5%85%B3%E9%80%94%E5%BE%84%2F</url>
+      <content type="text"><![CDATA[海投网](http://www.haitou.cc/) 右上角「宣讲会」查看各大高校双选会和招聘会 在右上角「招聘会」查看各大地方的招聘会 应届生招聘网 搜关键字：「Android」或者「安卓」，地区选择「北京」或者「南京」，搜到公司，发邮件投简历。 附： Android开发工程师–简历 个人寸照]]></content>
+    </entry>
+
+    
+    <entry>
       <title><![CDATA[centos与本地上传下载文件--lrzsz]]></title>
       <url>%2F2017%2F01%2F15%2Fcentos%E4%B8%8E%E6%9C%AC%E5%9C%B0%E4%B8%8A%E4%BC%A0%E4%B8%8B%E8%BD%BD%E6%96%87%E4%BB%B6-lrzsz%2F</url>
       <content type="text"><![CDATA[lrzsz是一款在linux里可代替ftp上传和下载的程序。 首先安装lrzsz 在线安装 yum -y install lrzsz 离线安装1.1 到网上下载lrzsz安装包，这里以lrzsz-0.12.20.tar.gz为例1.2 打开终端 cd 到安装包所在目录tar zxvf lrzsz-0.12.20.tar.gz 解压安装包1.3 进入解压好的目录里cd lrzsz-0.12.201.4 配置安装路径./configure –prefix=/usr/local/lrzsz1.5 编译make1.6 安装make install1.7 配置系统命令 cd /usr/binln -s /usr/local/lrzsz/bin/lrz rzln -s /usr/local/lrzsz/bin/lsz sz 如果/usr/bin下已存在，删除 1.8 在SecureCRT中测试是否安装成功 ，输入 rz 然后按回车如果弹出文件选择框，这样就成功了 rz运行rz命令后弹出选择文件窗口，找到要上传的文件后确认，文件会被上传到Centos当前目录下 2.下载文件，执行命令sz sz 文件名运行 sz命令后 弹出选择保存路径窗口，点击确认后 Centos上的文件会被下载到本地目录下 路径设置 ： 此处我用的是SecureCRT，具体的更改 rz上传/sz下载 的默认的路径的方法： 右键点击当前会话session -&gt; Session Options -&gt; Terminal -&gt; Xmodem/Zmodem -&gt;Directories : Upload : 你要设置的路径 Download:你要设置的路径]]></content>
